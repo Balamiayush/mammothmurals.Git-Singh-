@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "PoppinsRegular";
+    src: url('../public/fonts/Poppinsregular.woff2');
+}
+@font-face {
+    font-family: "PoppinsBold";
+    src: url('../public/fonts/Poppinsbold.woff2');
+}
+@font-face {
+    font-family: "Suissentl-Medium";
+    src: url('../public/fonts/68805858e095a766b86eb9f6_SuisseIntl-SemiBold-WebM.woff2');
+}
+@font-face {
+    font-family: "Obviously";
+    src: url('../public/fonts/6892c333bf67b1d5eafe58a0_Obviously-CondensedBlack.woff2');
+}
+@font-face {
+    font-family: "SuisseIntl-SemiBold";
+    src: url('../public/fonts/68805858e095a766b86eb9f6_SuisseIntl-SemiBold-WebM.woff2');
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'PoppinsRegular';
+    box-sizing: border-box;
+}

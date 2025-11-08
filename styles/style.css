@@ -24,3 +24,256 @@
     font-family: 'PoppinsRegular';
     box-sizing: border-box;
 }
+
+html {
+    padding: 30px;
+    font-size: 10px;
+    background-color: #FFF6E5;
+}
+
+.our-work {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.cloud-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.our-work h2 {
+    line-height: 0.9;
+    text-align: center;
+    color: #120011;
+    font-size: 31vw;
+    font-family: Obviously;
+}
+
+.cloud-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.cloud-img img {
+    width: 100%;
+    height: auto;
+}
+
+.project-images {
+    scale: 1.040;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    row-gap: 25px;
+    margin-top: 60px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+.image-container {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.image-container-child {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* card image styles */
+.project-main-img img {
+    object-fit: cover;
+    aspect-ratio: 3/2;
+    width: 100%;
+    scale: 1.05;
+    clip-path: inset(0 0 0 0);
+    transition: all 0.4s;
+}
+
+/* .dot styles */
+.dot img {
+    position: absolute;
+    width: 8px;
+    transition: all 0.4s;
+}
+
+.tl {
+    top: 0;
+    left: 0;
+}
+
+.tr {
+    top: 0;
+    right: 0;
+}
+
+.bl {
+    bottom: 0;
+    left: 0;
+}
+
+.br {
+    bottom: 0;
+    right: 0;
+}
+
+/* card bottom text styles */
+.text {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+}
+
+.left-text h3 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: Obviously;
+    color: #120011;
+}
+
+.right-btn {
+    column-gap: 7px;
+    height: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    color: #120011;
+}
+
+.up-btn {
+    display: flex;
+    font-size: 1.8rem;
+}
+
+.right-btn p {
+    background-color: #FFF6E5;
+    border-radius: 5px;
+    line-height: 0.9;
+    padding: 7px 10px;
+    border: 1px solid black;
+    font-family: Obviously;
+}
+
+.murals {
+    transform: translateX(5px);
+    transition: all 0.4s;
+}
+
+.year {
+    transform: translateX(0);
+    transition: all 0.4s;
+}
+
+.arrow-rotate-animation {
+    margin-top: 5px;
+    background-color: #FFD900;
+    border-radius: 5px;
+    line-height: 0.9;
+    padding: 4px 7px;
+    border: 1px solid black;
+    transform: rotate(0);
+    transform-origin: top right;
+    transition: all 0.2s;
+}
+
+.arrow-rotate-animation img {
+    width: 13px;
+    rotate: 270deg;
+}
+
+/* hover */
+.card:hover .project-main-img>img {
+    scale: 0.8;
+    clip-path: inset(10% 0 10% 0);
+    transform-origin: center;
+    filter: sepia(100%) saturate(300%) hue-rotate(8deg);
+}
+
+.card:hover .tl {
+    top: 15px;
+    left: 15px;
+}
+
+.card:hover .tr {
+    top: 15px;
+    right: 15px;
+}
+
+.card:hover .bl {
+    bottom: 15px;
+    left: 15px;
+}
+
+.card:hover .br {
+    bottom: 15px;
+    right: 15px;
+}
+
+.card:hover .arrow-rotate-animation {
+    transform: rotate(90deg);
+    margin-top: 0;
+}
+
+.card:hover .murals,
+.card:hover .year {
+    transform: translateX(120px);
+}
+
+/* media queries */
+
+@media (min-width: 740px) {
+
+    .our-work h2 {
+        font-size: 33vw;
+    }
+
+    .project-images {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    .our-work h2 {
+        font-size: 35vw;
+    }
+
+    .card {
+        width: 45vw;
+    }
+
+    .project-images {
+        margin-top: 30px;
+    }
+}

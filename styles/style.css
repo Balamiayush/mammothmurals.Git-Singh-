@@ -2,25 +2,481 @@
     font-family: "PoppinsRegular";
     src: url('../public/fonts/Poppinsregular.woff2');
 }
+
 @font-face {
     font-family: "PoppinsBold";
     src: url('../public/fonts/Poppinsbold.woff2');
 }
-@font-face {
-    font-family: "Suissentl-Medium";
-    src: url('../public/fonts/68805858e095a766b86eb9f6_SuisseIntl-SemiBold-WebM.woff2');
-}
-@font-face {
-    font-family: "Obviously";
-    src: url('../public/fonts/6892c333bf67b1d5eafe58a0_Obviously-CondensedBlack.woff2');
-}
+
 @font-face {
     font-family: "SuisseIntl-SemiBold";
     src: url('../public/fonts/68805858e095a766b86eb9f6_SuisseIntl-SemiBold-WebM.woff2');
 }
-*{
+
+@font-face {
+    font-family: 'pbold';
+    src: url('../public/fonts/6892c333bf67b1d5eafe58a0_Obviously-CondensedBlack.woff2');
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-family: 'PoppinsRegular';
     box-sizing: border-box;
+    font-family: 'PoppinsRegular';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    background-color: #FFD900;
+    font-size: clamp(14px, 1vw, 18px);
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper-padding {
+    padding: 1rem 2rem;
+}
+
+
+section {
+    max-width: 2000px;
+    width: 100%;
+}
+
+nav {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.nav-left p {
+    font-size: 30.9256px;
+    font-family: "pbold";
+    background-color: #000;
+    color: #fff;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    position: relative;
+
+
+}
+
+.right-btn {
+    display: none;
+}
+
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    padding: 0.8rem;
+    border-radius: 4px;
+
+
+}
+
+.nav-item a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #421b80;
+    /* transition: all 0.3s; */
+    transition: transform 0.40s cubic-bezier(0.31, 0.75, 0.22, 1);
+    will-change: transform;
+    font-family: "SuisseIntl-SemiBold";
+
+}
+
+.nav-item .bottom {
+
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    color: #421b80;
+    opacity: 1;
+    rotate: 45deg;
+    background-color: red;
+    transition: transform 0.5s ease-in-out, opacity 0.4s ease;
+    transform-origin: bottom left; */
+    /* background-color: var(--swatch--black); */
+    /* color: var(--swatch--light); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 0 100%;
+    transform-style: preserve-3d;
+    border-style: none;
+    position: absolute;
+    inset: 0%;
+    transform: translateY(100%) rotateX(-28deg) rotateY(-28deg) rotate(10deg);
+}
+
+
+
+
+.nav-item:hover .top {
+    transform: scale(0.5);
+}
+
+.nav-item:hover .bottom {
+    transform: translateY(0);
+    opacity: 1;
+    rotate: 0deg;
+    background-color: #000;
+    color: #fff;
+
+}
+
+.nav-right img {
+    height: 30px;
+    width: 30px;
+}
+
+.nav-right button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    border: 2px solid #421b80;
+    color: #421b80;
+    font-size: 13px;
+    padding: 0.6rem 1.4rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-right button:hover {
+    background: #421b80;
+    color: #FFD900;
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hero-top {
+    display: flex;
+    gap: 4rem;
+
+    align-items: end;
+}
+
+
+.murals-txt {
+
+    padding: 4rem 0;
+
+}
+
+.murals-txt h1 {
+    font-weight: 900;
+    font-size: 11vw;
+    line-height: 0.8;
+    font-family: "pbold";
+}
+
+
+
+.hero-bottom span {
+    font-size: 21px;
+    font-family: "SuisseIntl-SemiBold";
+    line-height: 1.2lh;
+
+}
+
+
+.left-video {
+    overflow: hidden;
+    width: 26%;
+
+
+
+
+}
+
+.left-video p {
+    font-family: "SuisseIntl-SemiBold";
+    font-size: 15.499px;
+
+}
+
+
+
+.left-video video {
+    height: 15vw;
+    width: 100%;
+    border-radius: 7px;
+    object-fit: cover;
+
+
+}
+
+
+
+.btn {
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+
+
+.btn-one {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7.1px 11.1px;
+    border-radius: 7px;
+    color: #Fff;
+    background-color: #000;
+    
+}
+
+.btn-second {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7.1px 11.1px;
+    border-radius: 7px;
+    background: transparent;
+}
+
+.btn img {
+    height: 30px;
+    width: 30px;
+}
+
+
+
+
+.bg-img {
+    min-height: 100dvh;
+    background-image: url(../public/imgs/japaniwallpaer.avif);
+    background-position: center;
+    background-size: cover;
+    border-radius: 4px;
+
+}
+
+.logo {
+    width: 100%;
+    margin-right: 40px;
+}
+
+.logo p {
+    font-size: 17.499px;
+    font-family: "SuisseIntl-SemiBold";
+    text-align: center;
+
+}
+
+.mobile {
+    display: none;
+}
+
+
+.logo-top {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+.logo-bottom {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.logo img {
+
+    height: 4vw;
+
+}
+
+#live {
+    height: 2vw;
+}
+
+#dropout {
+    height: 7vw;
+}
+
+
+@media (max-width: 768px) {
+
+    .wrapper-padding {
+        padding: 1rem;
+    }
+
+
+
+    nav {
+        flex-direction: row;
+        gap: 1rem;
+        height: auto;
+        text-align: center;
+    }
+
+    .nav-left p {
+        font-size: 20px;
+        padding: 0 0.5rem;
+    }
+
+    .right-btn {
+        display: block;
+
+    }
+
+    .right-btn button {
+        padding: 0 7px;
+        font-size: 26px;
+        border-radius: 5px;
+        border: 1px solid;
+        font-family: "pbold";
+        background: transparent;
+    }
+
+    .nav-center {
+        gap: 2rem;
+        display: none;
+    }
+
+    .nav-right button {
+        padding: 0.5rem 1rem;
+        font-size: 12px;
+        display: none;
+    }
+
+    /* HERO SECTION */
+    .hero-top {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .murals-txt h1 {
+        font-size: 20vw;
+        gap: 0;
+        line-height: 0.9;
+    }
+
+    .left-video {
+        width: 100%;
+    }
+
+    .left-video video {
+        width: 80%;
+        height: 45vw;
+        border-radius: 8px;
+    }
+
+    .hero-bottom span {
+        font-size: 14px;
+    }
+
+    .btn {
+
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-one {
+        width: 80%;
+        justify-content: center;
+        padding: 4px 3px;
+
+    }
+
+
+
+
+    .btn-second {
+
+        background: transparent;
+        flex-shrink: 0;
+        width: fit-content;
+    }
+
+    .bg-img {
+        min-height: 50vh;
+        border-radius: 8px;
+        background-size: cover;
+    }
+
+
+    .logo {
+        display: none;
+    }
+
+
+    .mobile {
+        display: block;
+        width: 100%;
+
+    }
+
+
+    .mobile p {
+        font-family: "SuisseIntl-SemiBold";
+        text-align: center;
+    }
+
+    .mobile-logo-top {
+        display: block;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        gap: 2rem;
+
+    }
+
+    .mobile-logo-top img {
+        height: 4vw;
+    }
+
+    #north {
+        height: 6vw;
+    }
+
+    #live {
+        height: 4vw;
+    }
+
+    #dropout {
+        height: 10vw;
+    }
+
+
 }

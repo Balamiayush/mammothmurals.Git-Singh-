@@ -1,0 +1,42 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+html,body{
+width: 100%;
+height: 100%;
+}
+html{
+  font-size: 10px;
+}
+.wrapper-padding{
+  width: 100%;
+  background: #000;
+  color: aliceblue;
+  padding: 6rem 3.2rem;
+
+}
+.t-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+
+  width: 100%;
+  background: purple;
+  text-align: center;
+
+}
+.t-header p{
+  font-size: 1vw;
+}
+
+.t-header h2{
+  width: 100%;
+  font-size: 26rem;
+  background: red;
+  line-height: 29vw;
+}

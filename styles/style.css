@@ -52,11 +52,11 @@ main .wrapper-padding .view-all-work {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  padding: 6rem 0;
 }
 main .wrapper-padding .view-all-work .view-wrapper {
-  width: 50%;
+  width: 50vw;
   display: flex;
+  justify-content: flex-end;
   flex-direction: column;
   gap: 1.4rem;
 }
@@ -69,14 +69,16 @@ main .wrapper-padding .view-all-work .view-wrapper .txt-container {
 }
 main .wrapper-padding .view-all-work .view-wrapper .txt-container > h3 {
   font-family: "pbold";
-  font-size: clamp(48px, 12vw, 85px);
-  letter-spacing: 0.3rem;
-  background: #3f955d;
+  font-size: clamp(48px, 7vw, 90px);
+  line-height: clamp(48px, 7vw, 90px);
+  letter-spacing: -0.1rem;
+  flex-shrink: 0;
+  display: flex;
+  gap: 1vw;
 }
 main .wrapper-padding .view-all-work .view-wrapper .txt-container > h3 sup {
-  font-size: clamp(28px, 6vw, 32px);
-  line-height: 6vw;
-  background: #ec6b6b;
+  font-size: clamp(28px, 5vw, 32px);
+  line-height: clamp(28px, 5vw, 32px);
   font-family: "pbold";
 }
 main .wrapper-padding .view-all-work .view-wrapper .txt-container .arrows {
@@ -88,6 +90,8 @@ main .wrapper-padding .view-all-work .view-wrapper .txt-container .arrows {
 main .wrapper-padding .view-all-work .view-wrapper .txt-container .arrows h3 {
   font-family: "pbold";
   transition: all ease-in-out 0.2s;
+  font-size: clamp(48px, 7vw, 80px);
+  line-height: clamp(48px, 7vw, 80px);
 }
 main .wrapper-padding .view-all-work .view-wrapper .txt-container .arrows::after {
   content: "";
@@ -118,7 +122,8 @@ main .wrapper-padding .view-all-work .view-wrapper .video-container .img-wrapper
 }
 main .blue {
   width: 100%;
-  background: #1a8dff;
+  margin-top: 5vw;
+  background: #47a0ff;
 }
 main .blue .services {
   width: 100%;
@@ -133,27 +138,30 @@ main .blue .service1 {
   justify-content: flex-start;
   align-items: flex-start;
   border: none;
+  gap: 5vw;
 }
 main .blue .service1 .content1 {
-  width: 40vw;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
 main .blue .service1 .content1 > h2 {
   font-family: pbold;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: clamp(32px, 6vw, 60px);
+  line-height: clamp(32px, 6vw, 60px);
 }
 main .blue .service1 .content1 p {
-  width: 60%;
+  width: 15ch;
   font-family: "Suissentl-Medium";
-  font-size: 1.4rem;
+  font-size: clamp(14px, 3vw, 26px);
+}
+main .blue .service1 .content2 {
+  width: 100%;
 }
 main .blue .service1 .content2 h3 {
-  font-size: 4rem;
-  line-height: 4.2rem;
-  width: 65%;
+  width: 25ch;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: clamp(32px, 4vw, 48px);
 }
 main .blue .service2,
 main .blue .service3,
@@ -162,24 +170,39 @@ main .blue .service4 {
   align-items: center;
   justify-content: space-between;
 }
-main .blue .service2 h2,
-main .blue .service3 h2,
-main .blue .service4 h2 {
+main .blue .service2 .service-text,
+main .blue .service3 .service-text,
+main .blue .service4 .service-text {
+  display: flex;
+  width: 66%;
+  gap: 5vw;
+}
+main .blue .service2 .service-text h2:first-child,
+main .blue .service3 .service-text h2:first-child,
+main .blue .service4 .service-text h2:first-child {
   text-align: center;
-  font-size: 15rem;
-  line-height: 10rem;
+  font-size: clamp(56px, 12.1vw, 180px);
+  line-height: clamp(56px, 12.1vw, 180px);
   font-family: "pbold";
   flex-shrink: 0;
 }
-main .blue .service2 h2:first-child,
-main .blue .service3 h2:first-child,
-main .blue .service4 h2:first-child {
+main .blue .service2 .service-text h2:last-child,
+main .blue .service3 .service-text h2:last-child,
+main .blue .service4 .service-text h2:last-child {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: clamp(56px, 12.1vw, 180px);
+  line-height: clamp(56px, 12.1vw, 180px);
+  font-family: "pbold";
+  flex-shrink: 0;
   text-align: left;
-  width: 16vw;
 }
 main .blue .service2 img,
 main .blue .service3 img,
 main .blue .service4 img {
+  max-width: 100%;
   width: 16vw;
   aspect-ratio: 6/4;
   border-radius: 0.6rem;
@@ -199,17 +222,13 @@ main .blue .service5 a {
 main .blue .service5 a h3 {
   text-transform: uppercase;
   font-family: "pbold";
-  font-size: 7rem;
+  font-size: clamp(32px, 6vw, 60px);
 }
 main .blue .service5 a .arrows {
   font-size: 7rem;
   display: flex;
   align-items: center;
   gap: 0.3rem;
-}
-main .blue .service5 a .arrows h3 {
-  font-family: "pbold";
-  transition: all ease-in-out 0.2s;
 }
 main .blue .service5 a .arrows::after {
   content: "";
@@ -220,10 +239,26 @@ main .blue .service5 a .arrows::after {
   top: 90%;
   left: 2.5%;
 }
+main .blue .service5 a .arrows h3 {
+  font-family: "pbold";
+  transition: all ease-in-out 0.2s;
+}
+main .blue .service5 a .arrows h3:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  width: 95%;
+  height: 0.4rem;
+  background-color: #000000;
+  top: 90%;
+  left: 2.5%;
+}
+main .blue .service5 a .arrows:last-child h3 {
+  transform: rotate(-180deg);
+}
 main .blue .service5 a:hover .arrows h3 {
   margin: 0 -0.17rem;
 }
-main .blue .service5 a:hover .arrows h3:last-child {
+main .blue .service5 a:hover .arrows h3:last-child() {
   margin-right: 0.3rem;
 }
 main .testemonial {
@@ -243,24 +278,26 @@ main .testemonial .t-header {
   justify-content: center;
 }
 main .testemonial .t-header p {
-  font-size: 1vw;
+  font-size: clamp(16px, 3vw, 18px);
+  text-align: center;
 }
 main .testemonial .t-header p:last-child {
-  width: 30vw;
+  width: 45ch;
 }
 main .testemonial .t-header h2 {
-  font-size: 27.46VW;
-  line-height: 24vw;
+  text-align: center;
+  width: 100%;
+  font-size: 26.7vw;
+  line-height: 26vw;
   font-family: "pbold";
   overflow: hidden;
 }
 main .testemonial .cards-section {
   width: 100%;
-  height: 115vh;
   padding: 6rem 0rem;
   display: flex;
   align-items: center;
-  gap: 5.2rem;
+  gap: 5.2vw;
   justify-content: center;
 }
 main .testemonial .cards-section .card {
@@ -274,70 +311,119 @@ main .testemonial .cards-section .card .crd-img {
   padding: 2rem;
   border: 0.2rem dashed black;
   width: 100%;
-  height: 78.6vh;
   border-radius: 0.4rem;
 }
 main .testemonial .cards-section .card .crd-img img {
   width: 100%;
   height: 100%;
   border-radius: 0.6rem;
+  aspect-ratio: 9/12;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .testemonial .cards-section .card p {
-  font-size: 2rem;
+  font-size: clamp(16px, 3vw, 18px);
 }
 main .testemonial .cards-section .card h2 {
   font-family: "pbold";
-  font-size: 1.6vw;
+  font-size: clamp(18px, 1.6vw, 24px);
   text-transform: uppercase;
-  line-height: 1.6vw;
+  line-height: clamp(18px, 1.6vw, 24px);
 }
 
-@media (max-width: 768px) {
-  main {
-    background: #ff0000;
+@media (max-width: 990px) {
+  main .wrapper-padding {
+    padding: 0 2rem;
   }
   main .wrapper-padding .view-all-work {
     width: 100%;
-    justify-content: flex-start;
+  }
+  main .wrapper-padding .view-all-work .view-wrapper {
+    width: 70vw;
+  }
+  main .blue {
+    width: 100%;
+    margin-top: 5vw;
+    background: #1a8dff;
+  }
+  main .blue .service1 {
+    flex-direction: column;
+    gap: 5vw;
+    width: 100%;
+  }
+  main .blue .service1 .content1 {
+    width: 100%;
+  }
+  main .blue .service1 .content1 p {
+    width: 100%;
+  }
+  main .blue .service1 .content2 h3 {
+    width: 100%;
+  }
+  main .testemonial .t-header p {
+    font-size: 3vw;
+  }
+  main .testemonial .t-header p:last-child {
+    font-size: 3vw;
+  }
+}
+@media (max-width: 767px) {
+  main .wrapper-padding {
+    padding: 0 1rem;
+  }
+  main .wrapper-padding .view-all-work {
+    width: 100%;
   }
   main .wrapper-padding .view-all-work .view-wrapper {
     width: 100vw;
   }
-  main .wrapper-padding .view-all-work .view-wrapper .txt-container .arrows {
-    font-size: 7vw;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
+  main .blue .service2,
+  main .blue .service3,
+  main .blue .service4 {
+    flex-direction: column;
+    gap: 5vw;
   }
-  main .wrapper-padding .view-all-work .view-wrapper .txt-container .arrows h3 {
-    font-family: "pbold";
-    transition: all ease-in-out 0.2s;
-  }
-  main .wrapper-padding .view-all-work .view-wrapper .txt-container .arrows::after {
-    content: "";
-    position: absolute;
+  main .blue .service2 .service-text,
+  main .blue .service3 .service-text,
+  main .blue .service4 .service-text {
     width: 100%;
-    height: 0.6rem;
-    background-color: #000000;
-    top: 90%;
-    left: 0;
+    align-items: start;
   }
-  main .wrapper-padding .view-all-work .view-wrapper .txt-container:hover .arrows h3 {
-    margin: 0 -0.17rem;
+  main .blue .service2 .service-text h2:last-child,
+  main .blue .service3 .service-text h2:last-child,
+  main .blue .service4 .service-text h2:last-child {
+    justify-content: start;
   }
-  main .wrapper-padding .view-all-work .view-wrapper .txt-container:hover .arrows h3:last-child {
-    margin-right: 0.3rem;
-  }
-  main .wrapper-padding .view-all-work .view-wrapper .video-container {
+  main .blue .service2 img,
+  main .blue .service3 img,
+  main .blue .service4 img {
     width: 100%;
   }
-  main .wrapper-padding .view-all-work .view-wrapper .video-container .img-wrapper {
-    height: 100%;
-    position: relative;
-    width: 55%;
+  main .blue .service5 a .arrows h3:nth-child(1), main .blue .service5 a .arrows h3:nth-last-child(1) {
+    display: none;
   }
-  main .wrapper-padding .view-all-work .view-wrapper .video-container .img-wrapper img {
-    width: 100%;
-    border-radius: 0.8rem;
+  main .blue .service5 a .arrows h3:nth-child(2), main .blue .service5 a .arrows h3:nth-last-child(2) {
+    display: none;
+  }
+  main .blue .service5 a .arrows h3:nth-child(3), main .blue .service5 a .arrows h3:nth-last-child(3) {
+    display: none;
+  }
+  main .testemonial .cards-section {
+    flex-direction: column;
+  }
+  main .testemonial .cards-section .card {
+    padding: 10vw;
+  }
+  main .testemonial .cards-section .card:nth-child(2) {
+    transform: rotate(-3deg);
+  }
+  main .testemonial .cards-section .card:nth-child(2n-1) {
+    transform: rotate(3deg);
+  }
+  main .testemonial .cards-section .card .crd-img img {
+    aspect-ratio: 5/6;
+  }
+  main .testemonial .cards-section .card p {
+    font-size: clamp(18px, 1.6vw, 24px);
   }
 }/*# sourceMappingURL=style.css.map */
